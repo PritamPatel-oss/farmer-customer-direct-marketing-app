@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    let u = JSON.parse(localStorage.getItem("currentUser"));
+    if (!u || u.role !== "admin") location = "login.html";
+  </script>
+</head>
+
+<body>
+
+  <h2>Admin Dashboard</h2>
+
+  <button onclick="manageFarmers()">Farmers</button>
+  <button onclick="manageProducts()">Products</button>
+  <button onclick="manageOrders()">Orders</button>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

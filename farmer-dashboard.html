@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Farmer</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    let u=JSON.parse(localStorage.getItem("currentUser"));
+    if(!u || u.role!=="farmer") location="login.html";
+  </script>
+</head>
+<body>
+
+<h2>Farmer Dashboard</h2>
+
+<input id="pname" placeholder="Product Name">
+<input id="pprice" type="number" placeholder="Price">
+
+<button onclick="addProduct()">Add Product</button>
+
+<div id="farmerProducts"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

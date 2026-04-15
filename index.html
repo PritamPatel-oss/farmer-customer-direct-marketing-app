@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Farmer Market</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    if (!localStorage.getItem("currentUser")) location = "login.html";
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <h1>🌾 Farmer Market</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <div class="filter">
+    <input id="searchInput" placeholder="Search..." onkeyup="applyFilters()">
+
+    <button onclick="setCategory('All')">All</button>
+    <button onclick="setCategory('Vegetable')">Vegetables</button>
+    <button onclick="setCategory('Fruit')">Fruits</button>
+    <button onclick="setCategory('Grain')">Grains</button>
+    <button onclick="setCategory('Pulse')">Pulses</button>
+  </div>
+
+  <div id="products" class="product-grid"></div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
